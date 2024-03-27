@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
+import UIKit
+
+struct planet : Identifiable{
+    var id = UUID()
+    var name : String
+    var color : Color
+}
