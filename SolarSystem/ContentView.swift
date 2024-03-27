@@ -18,10 +18,13 @@ struct ContentView: View {
     var body: some View {
         VStack {
             ZStack {
+                Color(.black)
+
 
                 Circle()
                     .fill(Color.yellow)
                     .frame(height: 100)
+                    .shadow(color: .yellow, radius: 20, x: 0.0, y: 0.0)
 
                 
 
@@ -80,6 +83,17 @@ struct ContentView: View {
                     .onAppear {
                         withAnimation(Animation.linear(duration: 8).repeatForever(autoreverses: false)) {
                                                 self.rotationAngleCyan = .degrees(360)
+                                            }
+                                        }
+                
+                Circle()
+                    .fill(Color.purple)
+                    .frame(height: 10)
+                    .padding(.leading,380)
+                    .rotationEffect(rotationAngleRed)
+                    .onAppear {
+                                withAnimation(Animation.linear(duration: 25).repeatForever(autoreverses: false)) {
+                                                self.rotationAngleRed = .degrees(360)
                                             }
                                         }
             
