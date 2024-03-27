@@ -23,14 +23,46 @@ struct ContentView: View {
 
                 Circle()
                     .fill(Color.yellow)
+                
                     .frame(height: 100)
+                
                     .shadow(color: .yellow, radius: 20, x: 0.0, y: 0.0)
+                    .saturation(5.0) // pour rendre plus éclantant entre " "
 
                 
-
-
-
-
+                
+                
+                
+                Circle() // pour  le cercle violet
+                    .stroke(lineWidth: 1.0)
+                    .opacity(0.5)
+                    .foregroundColor(.red)
+                    .padding(6)
+                
+                Circle() // pour  le cercle cyan
+                    .stroke(lineWidth: 1.0)
+                    .opacity(0.5)
+                    .foregroundColor(.red)
+                    .padding(40)
+                
+                Circle() // pour  le cercle bleu foncer
+                    .stroke(lineWidth: 1.0)
+                    .opacity(0.5)
+                    .foregroundColor(.red)
+                    .padding(85)
+                
+                Circle() // pour  le cercle vert
+                    .stroke(lineWidth: 1.0)
+                    .opacity(0.5)
+                    .foregroundColor(.red)
+                    .padding(115)
+                
+                Circle() // pour  le cercle rouge
+                    .stroke(lineWidth: 1.0)
+                    .opacity(0.5)
+                    .foregroundColor(.red)
+                    .padding(135)
+                
 
                 Circle()
                     .fill(Color.red)
@@ -42,9 +74,6 @@ struct ContentView: View {
                                                 self.rotationAngleRed = .degrees(360)
                                             }
                                         }
-                
-                    
-                
 
                 Circle()
                     .fill(Color.green)
@@ -56,13 +85,7 @@ struct ContentView: View {
                                                 self.rotationAngleGreen = .degrees(360)
                                             }
                                         }
-                     
-                
                    
-                                        
-                    
-                                        
-
                 Circle()
                     .fill(Color.blue)
                     .frame(height: 30)
@@ -77,11 +100,11 @@ struct ContentView: View {
 
                 Circle()
                     .fill(Color.cyan)
-                    .frame(height: 50)
+                    .frame(height: 40)
                     .padding(.leading,310)
                     .rotationEffect(rotationAngleCyan)
                     .onAppear {
-                        withAnimation(Animation.linear(duration: 8).repeatForever(autoreverses: false)) {
+                        withAnimation(Animation.linear(duration: 9).repeatForever(autoreverses: false)) {
                                                 self.rotationAngleCyan = .degrees(360)
                                             }
                                         }
@@ -96,33 +119,12 @@ struct ContentView: View {
                                                 self.rotationAngleRed = .degrees(360)
                                             }
                                         }
-            
-            
-            
-
-                
                     
                 } // FIN vSTACK
             } // FIN vSTACK
-            
-    } // body
-} // STRUT
-        
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
+        .ignoresSafeArea(.all)
+    } // fin body
+} // fin STRUT
 #Preview {
     ContentView()
 }
